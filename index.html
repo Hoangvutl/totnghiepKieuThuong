@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'align-items', sans-serif;
       scroll-behavior: smooth;
       background: white;
       color: #B5651D;
@@ -45,9 +45,10 @@
 
     .stars-text {
       color: #444;
-      font-family: 'Yellowtail', cursive;
+      font-size: 'ooohbaby', cursive;
       font-size: 2.5rem;
       z-index: 1001;
+      
     }
 
     .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
@@ -72,7 +73,7 @@
     }
 
     .intro h1 {
-      font-family: 'Yellowtail', cursive;
+      font-family: 'align-items', cursive;
       font-size: 3rem;
       margin-bottom: 20px;
     }
@@ -100,7 +101,7 @@
     }
 
     h1, h2 {
-      font-family: 'Yellowtail', cursive;
+      font-family: 'Playfair Display', serif;
     }
 
     h1 { font-size: 3rem; margin-bottom: 10px; }
@@ -167,17 +168,22 @@
   <div class="stars-bg" id="stars-bg">
     <div class="stars"></div>
     <div class="stars-text">
-      Bạn có muốn thêm một chút nhạc? 🎵<br>
-      <button class="btn" onclick="playMusic()">Bật nhạc</button>
-      <button class="btn" onclick="pauseMusic()">Tắt nhạc</button>
+      <p style="font-family: 'Pacifico', cursive; font-size: 2rem; font-weight: normal;">
+        Thêm chút nhạc?
+      </p>
+      <p style="font-family: 'align-self: start;', cursive; font-size: 1rem; font-weight: normal;">
+        Một bản nhạc đặc biệt cho khoảnh khắc này
+      </p>
+      <button class="btn" onclick="playMusic()">Có</button>
+      <button class="btn" onclick="pauseMusic()">Không</button>
     </div>
   </div>
 
   <section>
     <div class="intro-content">
-      <h1>Thiệp Mời</h1>
-      <h2>Tham gia lễ tốt nghiệp của</h2>
-      <h1 style="font-family: 'Amita', cursive;">"KIỀU THƯƠNG"</h1>
+      <h1 style="font-family: Playfair Display, serif; font-size: 3.2rem">THIỆP MỜI</h1>
+      <h2 style="font-family: 'align-self: start;', serif;font-weight: normal;">Tham gia lễ tốt nghiệp của</h2>
+      <h1 style="font-family: Great Vibes, cursive; font-weight: normal;font-size: 2rem;">"Kiều Thương"</h1>
       <p>"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.<br>
       Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
       <br>
@@ -186,10 +192,10 @@
   </section>
 
   <section id="invite">
-    <div class="card" style="font-family: 'Amita', cursive;">
+    <div class="card" style="font-family: 'Roboto', sans-serif, cursive;">
       <h2>TRÂN TRỌNG KÍNH MỜI</h2>
-      <p>Đến dự lễ tốt nghiệp</p>
-      <h2>NGUYỄN THỊ KIỀU THƯƠNG</h2>
+      <p  ></p>Đến dự lễ tốt nghiệp</p>
+      <p style="font-family: Great Vibes, cursive; font-weight: normal; font-size: 1.5rem;">Nguyễn Thị Kiều Thương</p>
       <hr style="width: 50px; margin: 10px auto; border: 1px solid #ccc;">
       <p><strong>Thời gian:</strong><br>Thứ sáu, ngày 18/07/2025, vào lúc: 08:00</p>
       <p><strong>Địa điểm:</strong><br>131 Lương Nhữ Học<br>Hội trường A, Trường Đại học Ngoại ngữ – Đại học Đà Nẵng</p>
@@ -232,7 +238,7 @@
           </p>
         </div>
         <div style="flex: 0 0 100px;">
-          <img src="qr.png" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
+          <img src="qr.jpg" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
         </div>
       </div>
     </div>
