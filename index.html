@@ -1,339 +1,314 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thiệp Mời Tốt Nghiệp - Nguyễn Thị Kiều Thương</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Yellowtail&family=Amita&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1') no-repeat center center/cover;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 500px;
-      animation: fadeIn 2s ease;
-      z-index: 2;
-      margin-bottom: 30px;
-    }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #ffd700;
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #e5c100;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .slideshow-container {
-      width: 100%;
-      max-width: 800px;
-      overflow: hidden;
-      margin-top: 30px;
-      border-radius: 15px;
-      border: 5px solid #fff;
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
-    }
-    .slides {
-      display: flex;
-      width: 1000%;
-      animation: slide 20s infinite;
-    }
-    .slides img {
-      width: 100%;
-      flex-shrink: 0;
-      object-fit: cover;
-    }
-    @keyframes slide {
-      0%, 10%   { transform: translateX(0); }
-      20%, 30%  { transform: translateX(-100%); }
-      40%, 50%  { transform: translateX(-200%); }
-      60%, 70%  { transform: translateX(-300%); }
-      80%, 90%  { transform: translateX(-400%); }
-      100%      { transform: translateX(0); }
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.9);
-      color: #000;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 500px;
-      margin-top: 30px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button[type="submit"] {
-      background: #ffd700;
-      color: black;
-      font-weight: bold;
-      padding: 10px 20px;
-      margin-top: 15px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    #msg {
-      color: green;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="card">
-    <h1>Thiệp Mời</h1>
-    <h2>Nguyễn Thị Kiều Thương</h2>
-    <p>Trân trọng kính mời bạn đến tham dự buổi lễ tốt nghiệp của mình<br><br>
-    🎓 Trường Đại học Ngoại ngữ<br>
-    📅 Thời gian: 25/07/2025<br>
-    📍 Địa điểm: Trường Đại học Ngoại ngữ
-    </p>
-  </div>
-
-  <form id="confirmForm">
-    <h2>Xác nhận tham dự</h2>
-    <input type="text" name="name" placeholder="Họ và tên" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="note" placeholder="Ghi chú (tuỳ chọn)"></textarea>
-    <button type="submit">Gửi xác nhận</button>
-    <p id="msg"></p>
-  </form>
-
-  <div class="slideshow-container">
-    <div class ="slides">
-      <img src="https://drive.google.com/file/d/1Y8tmX4H7aE6gCro2wdLFY4FL9Z9lq09l/view?usp=sharing" alt="Ảnh 1">
-      <img src="https://drive.google.com/file/d/1Y8tmX4H7aE6gCro2wdLFY4FL9Z9lq09l/view?usp=sharing" alt="Ảnh 2">
-      <img src="https://drive.google.com/file/d/1Y8tmX4H7aE6gCro2wdLFY4FL9Z9lq09l/view?usp=sharing" alt="Ảnh 3">
-      <img src="https://drive.google.com/file/d/1Y8tmX4H7aE6gCro2wdLFY4FL9Z9lq09l/view?usp=sharing" alt="Ảnh 4">
-      <img src="https://www.bing.com/images/search?q=%E1%BA%A3nh&FORM=IQFRBA&id=7871427AEBFD9144A866E44A0248FC68D1D31A2B" alt="Ảnh 5">
-      <img src="https://via.placeholder.com/800x400?text=Ảnh+6" alt="Ảnh 6">
-      <img src="https://via.placeholder.com/800x400?text=Ảnh+7" alt="Ảnh 7">
-      <img src="https://via.placeholder.com/800x400?text=Ảnh+8" alt="Ảnh 8">
-      <img src="https://via.placeholder.com/800x400?text=Ảnh+9" alt="Ảnh 9">
-      <img src="https://via.placeholder.com/800x400?text=Ảnh+10" alt="Ảnh 10">
-    </div>
-  </div>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz98QWMcRxNtuRYc7S-Dxe3z0wVI1dM6nt8YUzBoAGr2nOA8Vg_2YZCLPaHotO9bdPaTg/exec';
-        const form = document.getElementById('confirmForm');
-        const msg = document.getElementById('msg');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const formData = new FormData(form);
-
-            fetch(scriptURL, {
-            method: 'POST',
-            body: formData,
-            })
-            .then(response => {
-            if (response.ok) {
-                msg.innerText = "✅ Gửi thành công! Cảm ơn bạn.";
-                form.reset();
-            } else {
-                msg.innerText = "❌ Lỗi khi gửi!";
-            }
-            })
-            .catch(error => {
-            console.error("Error!", error);
-            msg.innerText = "❌ Không thể kết nối tới máy chủ.";
-            });
-        });
-    </script>
-
-
-</body>
-</html>
-
- -->
- <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiệp Mời Tốt Nghiệp - Nguyễn Thị Kiều Thương</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      overflow: hidden;
-      background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1') no-repeat center center/cover;
+      scroll-behavior: smooth;
+      background: white;
+      color: #B5651D;
+    }
+
+    section {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    #bg-video {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1000;
+      pointer-events: none;
     }
 
     .stars-bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: black;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: fixed; width: 100%; height: 100%;
+      background: black; z-index: 1000;
+      display: flex; align-items: center; justify-content: center;
       flex-direction: column;
       animation: fadeOut 1s ease 5s forwards;
     }
 
     .stars-text {
-      color: white;
-      font-family: 'Great Vibes', cursive;
+      color: #444;
+      font-family: 'Yellowtail', cursive;
       font-size: 2.5rem;
       z-index: 1001;
     }
 
-    .stars {
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      position: absolute;
-      overflow: hidden;
-      z-index: 1000;
-    }
+    .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
     .stars span {
       position: absolute;
-      display: block;
-      width: 2px;
-      height: 2px;
+      width: 2px; height: 2px;
       background: white;
       animation: twinkle 2s infinite;
     }
-    @keyframes twinkle {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
+
+    @keyframes twinkle { 0%,100%{opacity:0;} 50%{opacity:1;} }
+    @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+
+    .intro {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      color: #B5651D;
     }
 
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
+    .intro h1 {
+      font-family: 'Yellowtail', cursive;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
       border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
       text-align: center;
-      max-width: 500px;
+      color: #B5651D;
       opacity: 0;
-      animation: fadeInCard 2s ease 6s forwards;
-      color: white;
-      z-index: 1;
-    }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #ffd700;
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #e5c100;
+      animation: fadeInCard 2s ease 1s forwards;
     }
 
     @keyframes fadeInCard {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    h1, h2 {
+      font-family: 'Yellowtail', cursive;
+    }
+
+    h1 { font-size: 3rem; margin-bottom: 10px; }
+    h2 { font-size: 1.5rem; margin-bottom: 20px; }
+    p { font-size: 1.1rem; line-height: 1.6; }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ffd700; color: #444;
+      border: none; border-radius: 10px;
+      cursor: pointer; font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover { background: #e5c100; }
+
+    .intro {
+      position: relative;
+      background: transparent;
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      border-radius: 20px;
+      height: auto;
+      max-width: 90vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .intro-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .intro-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   </style>
 </head>
-<body>
-  <div class="stars-bg">
+<body style="background: transparent;">
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video nền.
+  </video>
+
+  <div class="stars-bg" id="stars-bg">
     <div class="stars"></div>
-    <div class="stars-text">Chào mừng đến với Thiệp Mời Tốt Nghiệp của Kiều Thương 🎓</div>
+    <div class="stars-text">
+      Bạn có muốn thêm một chút nhạc? 🎵<br>
+      <button class="btn" onclick="playMusic()">Bật nhạc</button>
+      <button class="btn" onclick="pauseMusic()">Tắt nhạc</button>
+    </div>
   </div>
 
-  <div class="card">
-    <h1>Thiệp Mời</h1>
-    <h2>Nguyễn Thị Kiều Thương</h2>
-    <p>Trân trọng kính mời bạn đến tham dự buổi lễ tốt nghiệp của mình<br><br>
-    🎓 Trường Đại học Ngoại ngữ<br>
-    📅 Thời gian: 25/07/2025<br>
-    📍 Địa điểm: Trường Đại học Ngoại ngữ
-    </p>
-    <button class="btn" onclick="alert('Cảm ơn bạn đã xác nhận tham dự!')">Xác nhận tham dự</button>
+  <section>
+    <div class="intro-content">
+      <h1>Thiệp Mời</h1>
+      <h2>Tham gia lễ tốt nghiệp của</h2>
+      <h1 style="font-family: 'Amita', cursive;">"KIỀU THƯƠNG"</h1>
+      <p>"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.<br>
+      Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
+      <br>
+      <img src="anhthuong.png" alt="Thiệp Mời" style="height: 50vh; width: auto; max-width: 90vw; border-radius: 20px; object-fit: cover;">
+    </div>
+  </section>
+
+  <section id="invite">
+    <div class="card" style="font-family: 'Amita', cursive;">
+      <h2>TRÂN TRỌNG KÍNH MỜI</h2>
+      <p>Đến dự lễ tốt nghiệp</p>
+      <h2>NGUYỄN THỊ KIỀU THƯƠNG</h2>
+      <hr style="width: 50px; margin: 10px auto; border: 1px solid #ccc;">
+      <p><strong>Thời gian:</strong><br>Thứ sáu, ngày 18/07/2025, vào lúc: 08:00</p>
+      <p><strong>Địa điểm:</strong><br>131 Lương Nhữ Học<br>Hội trường A, Trường Đại học Ngoại ngữ – Đại học Đà Nẵng</p>
+      <p><strong>Bản đồ:</strong></p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7858.922459316785!2d108.20908817517564!3d16.034587540364363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421993058c6045%3A0x4dbbb9ccec61fee3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ2_huqFpIG5n4buvIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e1!3m2!1svi!2sus!4v1751530161440!5m2!1svi!2sus"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 12px; margin-top: 10px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+      <form style="margin-top: 20px;" id="rsvp-form">
+        <label for="name">Tên của bạn:</label>
+        <input type="text" id="name" name="name" required>
+        <button class="btn" type="submit">Xác nhận tham dự</button>
+      </form>
+      <p id="form-message" style="margin-top: 10px; color: green;"></p>
+    </div>
+  </section>
+  <section id="info">
+  <div class="card" style="font-family: 'Roboto', sans-serif; max-width: 400px;">
+    <h3 style="font-weight: bold;">Thông tin liên hệ</h3>
+    <p>Số điện thoại: 0889 246 316<br>hoặc<br>Số điện thoại: 0384 535 073</p>
+    <hr style="margin: 15px 0;">
+    <p><strong>Vị trí giữ xe:</strong><br>đối diện 61 Phạm Thế Hiển (cổng sau)</p>
+    <p><strong>Vị trí hội trường A:</strong><br>Tầng 2, trường Đại học Ngoại ngữ</p>
+
+    <div style="margin-top: 20px; background: #f5f5f5; padding: 15px; border-radius: 12px;">
+      <p style="font-weight: bold; text-align: center;">Món quà yêu thương</p>
+      <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 150px;">
+          <p>Nguyễn Thị Kiều Thương<br>
+          Ngân hàng: Vietcombank<br>
+          STK: 
+          <span id="stk">1015846800</span>
+          <button onclick="copySTK()" title="Sao chép STK" style="background: none; border: none; cursor: pointer; font-size: 1rem;">📋</button>
+          </p>
+        </div>
+        <div style="flex: 0 0 100px;">
+          <img src="qr.png" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
+        </div>
+      </div>
+    </div>
   </div>
+</section>
+
+
+
+
+  <audio id="bg-music" src="music.mp3" preload="auto"></audio>
 
   <script>
-    // Tạo hiệu ứng các ngôi sao ngẫu nhiên
+    const form = document.getElementById('rsvp-form');
+    const message = document.getElementById('form-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbyUNMfdDEWYTQXxth6VbsZsbZsWvhz5s1EY2oUfDJ_Y-27_VZ3hHRsvPEHWEx6QY2wshA/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.text())
+      .then(data => {
+        message.textContent = "Đã xác nhận! Cảm ơn bạn.";
+        form.reset();
+      })
+      .catch(err => {
+        message.textContent = "Có lỗi xảy ra. Vui lòng thử lại.";
+        message.style.color = "red";
+      });
+    });
+
     const starsContainer = document.querySelector('.stars');
-    for(let i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
       let star = document.createElement('span');
       star.style.left = Math.random() * window.innerWidth + 'px';
       star.style.top = Math.random() * window.innerHeight + 'px';
       star.style.animationDelay = Math.random() * 2 + 's';
       starsContainer.appendChild(star);
     }
+    function copySTK() {
+    const stk = document.getElementById("stk").innerText;
+    navigator.clipboard.writeText(stk).then(() => {
+      alert("Đã sao chép số tài khoản: " + stk);
+    }).catch(() => {
+      alert("Không thể sao chép.");
+    });
+  }
+
+    const music = document.getElementById('bg-music');
+    music.volume = 0.8;
+
+    const starsOverlay = document.getElementById('stars-bg');
+
+    function playMusic() {
+      music.play().catch(() => {});
+      starsOverlay.style.display = 'none';
+    }
+
+    function pauseMusic() {
+      music.pause();
+      starsOverlay.style.display = 'none';
+    }
+
+    // Tự động phát nhạc khi cuộn đến phần #invite
+    const inviteSection = document.getElementById('invite');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          music.play().catch(() => {});
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(inviteSection);
   </script>
 </body>
 </html>
