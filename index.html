@@ -381,13 +381,13 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const formData = new FormData(form);
+      message.textContent = "🎉 Cảm ơn bạn đã xác nhận tham dự!";
       fetch('https://script.google.com/macros/s/AKfycbyUNMfdDEWYTQXxth6VbsZsbZsWvhz5s1EY2oUfDJ_Y-27_VZ3hHRsvPEHWEx6QY2wshA/exec', {
         method: 'POST',
         body: formData
       })
       .then(res => res.text())
       .then(data => {
-        message.textContent = "🎉 Cảm ơn bạn đã xác nhận tham dự!";
         message.classList.remove("error"); // nếu có class lỗi
         message.classList.add("show");
         form.reset();
