@@ -36,18 +36,22 @@
     }
 
     .stars-bg {
-      position: fixed; width: 100%; height: 100%;
-      background: black; z-index: 1000;
+      position: fixed;
+      width: 100%; height: 100%;
+      background: black;
+      z-index: 1000;
       display: flex; align-items: center; justify-content: center;
       flex-direction: column;
-      animation: fadeOut 1s ease 10s forwards;
+      animation: fadeOut 1s ease 5s forwards;
     }
 
     .stars-text {
       color: #ffffff;
       font-size: 2.5rem;
       z-index: 1001;
-      align-items: center; justify-content: center;
+      display: flex;align-items: center; justify-content: center;
+            flex-direction: column;
+
     }
 
     .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
@@ -251,17 +255,20 @@
         Thêm chút nhạc?
       </p>
       <p style="font-size: 1rem; font-weight: normal;">
-        Một bản nhạc đặc biệt cho khoảnh khắc này
+        Một bản nhạc đặc biệt cho khoảnh khắc đặc biệt
       </p>
-      <button class="btn" onclick="playMusic()">Có</button>
+      <div>
+        <button class="btn" onclick="playMusic()">Có</button>
       <button class="btn" onclick="pauseMusic()">Không</button>
+      </div>
+      
     </div>
   </div>
 
   <section>
     <div class="intro-content">
       <h1 class="scroll-reveal">THIỆP MỜI</h1>
-      <h2 class="scroll-reveal" style="font-weight: normal; font-family: 'Roboto';font-size: 1rem;';">Tham gia lễ tốt nghiệp của</h2>
+      <h2 class="scroll-reveal" style="font-weight: normal; font-family: 'Roboto';font-size: 1rem;">Tham gia lễ tốt nghiệp của</h2>
       <h1 class="scroll-reveal" style="font-family: Great Vibes, cursive; font-weight: normal; font-size: 2rem;">"Kiều Thương"</h1>
       <p class="scroll-reveal">"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.</p>
         <p class="scroll-reveal">"Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
