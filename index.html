@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
-      font-family: 'align-items', sans-serif;
+      font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
       background: white;
       color: #B5651D;
@@ -45,10 +45,8 @@
 
     .stars-text {
       color: #444;
-      font-size: 'ooohbaby', cursive;
       font-size: 2.5rem;
       z-index: 1001;
-      
     }
 
     .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
@@ -61,63 +59,6 @@
 
     @keyframes twinkle { 0%,100%{opacity:0;} 50%{opacity:1;} }
     @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
-
-    .intro {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 400px;
-      color: #B5651D;
-    }
-
-    .intro h1 {
-      font-family: 'align-items', cursive;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .intro p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      color: #B5651D;
-      opacity: 0;
-      animation: fadeInCard 2s ease 1s forwards;
-    }
-
-    @keyframes fadeInCard {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    h1 { font-size: 3rem; margin-bottom: 10px; }
-    h2 { font-size: 1.5rem; margin-bottom: 20px; }
-    p { font-size: 1.1rem; line-height: 1.6; }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #ffd700; color: #444;
-      border: none; border-radius: 10px;
-      cursor: pointer; font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn:hover { background: #e5c100; }
 
     .intro {
       position: relative;
@@ -156,9 +97,145 @@
       font-size: 1rem;
       line-height: 1.5;
     }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      color: #B5651D;
+      opacity: 0;
+      animation: fadeInCard 2s ease 1s forwards;
+    }
+
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    h1 { font-size: 3rem; margin-bottom: 10px; }
+    h2 { font-size: 1.5rem; margin-bottom: 20px; }
+    p { font-size: 1.1rem; line-height: 1.6; }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ffd700; color: #444;
+      border: none; border-radius: 10px;
+      cursor: pointer; font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover { background: #e5c100; }
+
+    /* Nút bật/tắt nhạc */
+    #music-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 2000;
+      font-size: 1.8rem;
+      cursor: pointer;
+      /* background: rgba(255,255,255,0.8); */
+      padding: 10px;
+      border-radius: 50%;
+      /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+      user-select: none;
+      transition: background 0.3s;
+    }
+
+    /* #music-toggle:hover {
+      background: #ffeeba;
+    } */
+
+    /* Hiệu ứng scroll-reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .rsvp-box {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      color: #B5651D;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .rsvp-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      font-family: 'Great Vibes', cursive;
+      color: #B5651D;
+    }
+
+    .rsvp-box p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .rsvp-box input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .rsvp-box input[type="text"]:focus {
+      border-color: #B5651D;
+    }
+
+    .rsvp-box .btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .success-message {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      background-color: #e6ffee;
+      color: #1c7430;
+      padding: 12px 16px;
+      border-left: 5px solid #28a745;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      height: auto;
+      display: block; /* ⚠️ Không dùng display: none ở đây */
+      pointer-events: none;
+    }
+
+    .success-message.show {
+      opacity: 1;
+    }
+
+
   </style>
 </head>
 <body style="background: transparent;">
+
+  <!-- Nút bật/tắt nhạc -->
+  <div id="music-toggle" onclick="toggleMusic()" title="Bật / Tắt nhạc">🔊</div>
 
   <video autoplay muted loop playsinline id="bg-video">
     <source src="background.mp4" type="video/mp4">
@@ -171,7 +248,7 @@
       <p style="font-family: 'Pacifico', cursive; font-size: 2rem; font-weight: normal;">
         Thêm chút nhạc?
       </p>
-      <p style="font-family: 'align-self: start;', cursive; font-size: 1rem; font-weight: normal;">
+      <p style="font-size: 1rem; font-weight: normal;">
         Một bản nhạc đặc biệt cho khoảnh khắc này
       </p>
       <button class="btn" onclick="playMusic()">Có</button>
@@ -181,20 +258,20 @@
 
   <section>
     <div class="intro-content">
-      <h1 style="font-family: Playfair Display, serif; font-size: 3.2rem">THIỆP MỜI</h1>
-      <h2 style="font-family: 'align-self: start;', serif;font-weight: normal;">Tham gia lễ tốt nghiệp của</h2>
-      <h1 style="font-family: Great Vibes, cursive; font-weight: normal;font-size: 2rem;">"Kiều Thương"</h1>
-      <p>"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.<br>
-      Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
+      <h1 class="scroll-reveal">THIỆP MỜI</h1>
+      <h2 class="scroll-reveal" style="font-weight: normal;">Tham gia lễ tốt nghiệp của</h2>
+      <h1 class="scroll-reveal" style="font-family: Great Vibes, cursive; font-weight: normal; font-size: 2rem;">"Kiều Thương"</h1>
+      <p class="scroll-reveal">"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.<br>
+        Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
       <br>
-      <img src="anhthuong.png" alt="Thiệp Mời" style="height: 50vh; width: auto; max-width: 90vw; border-radius: 20px; object-fit: cover;">
+      <img src="anhthuong.png" alt="Thiệp Mời" class="scroll-reveal" style="height: 50vh; width: auto; max-width: 90vw; border-radius: 20px; object-fit: cover;">
     </div>
   </section>
 
   <section id="invite">
-    <div class="card" style="font-family: 'Roboto', sans-serif, cursive;">
+    <div class="card scroll-reveal">
       <h2>TRÂN TRỌNG KÍNH MỜI</h2>
-      <p  ></p>Đến dự lễ tốt nghiệp</p>
+      <p>Đến dự lễ tốt nghiệp</p>
       <p style="font-family: Great Vibes, cursive; font-weight: normal; font-size: 1.5rem;">Nguyễn Thị Kiều Thương</p>
       <hr style="width: 50px; margin: 10px auto; border: 1px solid #ccc;">
       <p><strong>Thời gian:</strong><br>Thứ sáu, ngày 18/07/2025, vào lúc: 08:00</p>
@@ -209,48 +286,86 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
-      
-      <form style="margin-top: 20px;" id="rsvp-form">
+      <!-- <form style="margin-top: 20px;" id="rsvp-form">
         <label for="name">Tên của bạn:</label>
         <input type="text" id="name" name="name" required>
         <button class="btn" type="submit">Xác nhận tham dự</button>
-      </form>
-      <p id="form-message" style="margin-top: 10px; color: green;"></p>
+      </form> -->
     </div>
   </section>
-  <section id="info">
-  <div class="card" style="font-family: 'Roboto', sans-serif; max-width: 400px;">
-    <h3 style="font-weight: bold;">Thông tin liên hệ</h3>
-    <p>Số điện thoại: 0889 246 316<br>hoặc<br>Số điện thoại: 0384 535 073</p>
-    <hr style="margin: 15px 0;">
-    <p><strong>Vị trí giữ xe:</strong><br>đối diện 61 Phạm Thế Hiển (cổng sau)</p>
-    <p><strong>Vị trí hội trường A:</strong><br>Tầng 2, trường Đại học Ngoại ngữ</p>
+  <section id="rsvp" class="scroll-reveal">
+  <div class="rsvp-box">
+    <h2>📩 Xác nhận tham dự</h2>
+    <p>Điền tên của bạn để xác nhận tham dự buổi lễ nhé!</p>
+    <form id="rsvp-form">
+      <input type="text" id="name" name="name" placeholder="Tên của bạn" required>
+      <button class="btn" type="submit">Xác nhận tham dự</button>
+    </form>
+      <p id="form-message" style="margin-top: 10px; color: green;"></p>
 
-    <div style="margin-top: 20px; background: #f5f5f5; padding: 15px; border-radius: 12px;">
-      <p style="font-weight: bold; text-align: center;">Món quà yêu thương</p>
-      <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 150px;">
-          <p>Nguyễn Thị Kiều Thương<br>
-          Ngân hàng: Vietcombank<br>
-          STK: 
-          <span id="stk">1015846800</span>
-          <button onclick="copySTK()" title="Sao chép STK" style="background: none; border: none; cursor: pointer; font-size: 1rem;">📋</button>
-          </p>
-        </div>
-        <div style="flex: 0 0 100px;">
-          <img src="qr.jpg" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+  <section id="info">
+    <div class="card scroll-reveal">
+      <h3 style="font-weight: bold;">Thông tin liên hệ</h3>
+      <p>Số điện thoại: 0889 246 316<br>hoặc<br>Số điện thoại: 0384 535 073</p>
+      <hr style="margin: 15px 0;">
+      <p><strong>Vị trí giữ xe:</strong><br>đối diện 61 Phạm Thế Hiển (cổng sau)</p>
+      <p><strong>Vị trí hội trường A:</strong><br>Tầng 2, trường Đại học Ngoại ngữ</p>
+      <div style="margin-top: 20px; background: #f5f5f5; padding: 15px; border-radius: 12px;">
+        <p style="font-weight: bold; text-align: center;">Món quà yêu thương</p>
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 150px;">
+            <p>Nguyễn Thị Kiều Thương<br>
+              Ngân hàng: Vietcombank<br>
+              STK:
+              <span id="stk">1015846800</span>
+              <button onclick="copySTK()" title="Sao chép STK" style="background: none; border: none; cursor: pointer; font-size: 1rem;">📋</button>
+            </p>
+          </div>
+          <div style="flex: 0 0 100px;">
+            <img src="qr.jpg" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-  <audio id="bg-music" src="music.mp3" preload="auto"></audio>
+  <audio id="bg-music" src="music.mp3" preload="auto" loop></audio>
 
   <script>
+    const music = document.getElementById('bg-music');
+    music.volume = 0.8;
+    let allowAutoPlay = true;
+    let isMusicPlaying = false;
+
+    const starsOverlay = document.getElementById('stars-bg');
+
+    function playMusic() {
+      allowAutoPlay = true;
+      music.play().catch(() => {});
+      document.getElementById("music-toggle").textContent = "🔊";
+      isMusicPlaying = true;
+      starsOverlay.style.display = 'none';
+    }
+
+    function pauseMusic() {
+      allowAutoPlay = false;
+      music.pause();
+      document.getElementById("music-toggle").textContent = "🔇";
+      isMusicPlaying = false;
+      starsOverlay.style.display = 'none';
+    }
+
+    function toggleMusic() {
+      if (music.paused) {
+        playMusic();
+      } else {
+        pauseMusic();
+      }
+    }
+
     const form = document.getElementById('rsvp-form');
     const message = document.getElementById('form-message');
 
@@ -263,14 +378,28 @@
       })
       .then(res => res.text())
       .then(data => {
-        message.textContent = "Đã xác nhận! Cảm ơn bạn.";
+        message.textContent = "🎉 Cảm ơn bạn đã xác nhận tham dự!";
+        message.classList.remove("error"); // nếu có class lỗi
+        message.classList.add("show");
         form.reset();
+        setTimeout(() => {
+          message.classList.remove("show");
+        }, 5000);
       })
       .catch(err => {
-        message.textContent = "Có lỗi xảy ra. Vui lòng thử lại.";
-        message.style.color = "red";
+        message.textContent = "❌ Có lỗi xảy ra. Vui lòng thử lại.";
+        message.classList.remove("show");
+        message.classList.add("show");
+        message.style.backgroundColor = "#ffe6e6";
+        message.style.color = "#a71d2a";
+        message.style.borderLeft = "5px solid #dc3545";
+        setTimeout(() => {
+          message.classList.remove("show");
+        }, 5000);
       });
     });
+
+
 
     const starsContainer = document.querySelector('.stars');
     for (let i = 0; i < 100; i++) {
@@ -280,41 +409,39 @@
       star.style.animationDelay = Math.random() * 2 + 's';
       starsContainer.appendChild(star);
     }
+
     function copySTK() {
-    const stk = document.getElementById("stk").innerText;
-    navigator.clipboard.writeText(stk).then(() => {
-      alert("Đã sao chép số tài khoản: " + stk);
-    }).catch(() => {
-      alert("Không thể sao chép.");
-    });
-  }
-
-    const music = document.getElementById('bg-music');
-    music.volume = 0.8;
-
-    const starsOverlay = document.getElementById('stars-bg');
-
-    function playMusic() {
-      music.play().catch(() => {});
-      starsOverlay.style.display = 'none';
+      const stk = document.getElementById("stk").innerText;
+      navigator.clipboard.writeText(stk).then(() => {
+        alert("Đã sao chép số tài khoản: " + stk);
+      }).catch(() => {
+        alert("Không thể sao chép.");
+      });
     }
 
-    function pauseMusic() {
-      music.pause();
-      starsOverlay.style.display = 'none';
-    }
-
-    // Tự động phát nhạc khi cuộn đến phần #invite
     const inviteSection = document.getElementById('invite');
-    const observer = new IntersectionObserver((entries) => {
+    const observerMusic = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && allowAutoPlay) {
           music.play().catch(() => {});
+          document.getElementById("music-toggle").textContent = "🔊";
+          isMusicPlaying = true;
         }
       });
     }, { threshold: 0.5 });
 
-    observer.observe(inviteSection);
+    observerMusic.observe(inviteSection);
+
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
