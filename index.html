@@ -7,17 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Yellowtail&family=Amita&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
+    body, html {
       height: 100%;
       font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
       background: white;
       color: #B5651D;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+
     section {
       min-height: 100vh;
       display: flex;
@@ -27,6 +24,7 @@
       z-index: 1;
       padding: 20px;
     }
+
     #bg-video {
       position: fixed;
       inset: 0;
@@ -36,30 +34,36 @@
       z-index: -1000;
       pointer-events: none;
     }
+
     .stars-bg {
-      position: fixed;
-      width: 100%; height: 100%;
-      background: black;
-      z-index: 1000;
+      position: fixed; width: 100%; height: 100%;
+      background: black; z-index: 1000;
       display: flex; align-items: center; justify-content: center;
       flex-direction: column;
-      animation: fadeOut 1s ease 5s forwards;
+      animation: fadeOut 1s ease 10s forwards;
     }
+
     .stars-text {
-      color: #444;
+      color: #ffffff;
       font-size: 2.5rem;
       z-index: 1001;
+      align-items: center; justify-content: center;
     }
+
     .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
     .stars span {
       position: absolute;
       width: 2px; height: 2px;
       background: white;
       animation: twinkle 2s infinite;
+      align-items: center; justify-content: center;
     }
+
     @keyframes twinkle { 0%,100%{opacity:0;} 50%{opacity:1;} }
     @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+
     .intro {
+      position: relative;
       background: transparent;
       min-height: 100vh;
       width: 100vw;
@@ -68,47 +72,71 @@
       justify-content: center;
       text-align: center;
     }
+
     .intro-content {
+      position: relative;
+      z-index: 1;
       padding: 20px;
       border-radius: 20px;
+      height: auto;
       max-width: 90vw;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
-    .intro-content h1 { font-size: 2.5rem; }
-    .intro-content h2 { font-size: 1.3rem; margin-bottom: 15px; }
-    .intro-content p { font-size: 1rem; line-height: 1.5; }
-    .card, .rsvp-box {
-      background: rgba(255,255,255,0.95);
-      padding: 30px 25px;
+
+    .intro-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .intro-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .intro-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
       border-radius: 20px;
       width: 100%;
       max-width: 400px;
-      margin: 0 auto;
       text-align: center;
       color: #B5651D;
-      font-family: 'Roboto', sans-serif;
+      opacity: 0;
+      animation: fadeInCard 2s ease 1s forwards;
     }
-    .card { opacity: 0; animation: fadeInCard 2s ease 1s forwards; }
+
     @keyframes fadeInCard {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    h1, h2 { font-family: 'Playfair Display', serif; }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
     h1 { font-size: 3rem; margin-bottom: 10px; }
     h2 { font-size: 1.5rem; margin-bottom: 20px; }
     p { font-size: 1.1rem; line-height: 1.6; }
+
     .btn {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #bdbdb9; color: #000000;
-      border: 1px; border-radius: 10px;
-
+      background: #ffd700; color: #444;
+      border: none; border-radius: 10px;
       cursor: pointer; font-weight: bold;
       transition: background 0.3s;
     }
-    .btn:hover { background: #000000; color: #ffffff;border-color: #ffffff;}
+
+    .btn:hover { background: #e5c100; }
+
+    /* Nút bật/tắt nhạc */
     #music-toggle {
       position: fixed;
       top: 15px;
@@ -116,13 +144,53 @@
       z-index: 2000;
       font-size: 1.8rem;
       cursor: pointer;
+      /* background: rgba(255,255,255,0.8); */
       padding: 10px;
       border-radius: 50%;
+      /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
       user-select: none;
       transition: background 0.3s;
     }
-    .scroll-reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
-    .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* #music-toggle:hover {
+      background: #ffeeba;
+    } */
+
+    /* Hiệu ứng scroll-reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .rsvp-box {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      color: #B5651D;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .rsvp-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      font-family: 'Great Vibes', cursive;
+      color: #B5651D;
+    }
+
+    .rsvp-box p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
     .rsvp-box input[type="text"] {
       width: 100%;
       padding: 12px;
@@ -132,9 +200,16 @@
       font-size: 1rem;
       outline: none;
     }
+
     .rsvp-box input[type="text"]:focus {
       border-color: #B5651D;
     }
+
+    .rsvp-box .btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+
     .success-message {
       opacity: 0;
       transition: opacity 0.8s ease;
@@ -147,29 +222,16 @@
       font-weight: 500;
       margin-top: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      height: auto;
+      display: block; /* ⚠️ Không dùng display: none ở đây */
       pointer-events: none;
     }
-    .success-message.show { opacity: 1; }
-    .map-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      margin-top: 10px;
+
+    .success-message.show {
+      opacity: 1;
     }
-    .map-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: 0;
-    }
-    @media (max-width: 480px) {
-      .intro-content h1 { font-size: 2rem; }
-      .intro-content h2, .card h2, .rsvp-box h2 { font-size: 1.2rem; }
-      .card, .rsvp-box { padding: 20px 15px; }
-      #music-toggle { font-size: 1.5rem; padding: 8px; }
-    }
+
+
   </style>
 </head>
 <body style="background: transparent;">
@@ -185,13 +247,13 @@
   <div class="stars-bg" id="stars-bg">
     <div class="stars"></div>
     <div class="stars-text">
-      <p style="font-family: 'Pacifico', cursive; font-size: 2rem; font-weight: normal;color: white;">
+      <p style="font-family: 'Pacifico', cursive; font-size: 2rem; font-weight: normal;">
         Thêm chút nhạc?
       </p>
-      <p style="font-size: 1rem; font-weight: normal;color: white">
+      <p style="font-size: 1rem; font-weight: normal;">
         Một bản nhạc đặc biệt cho khoảnh khắc này
       </p>
-      <button class="btn"  onclick="playMusic()">Có</button>
+      <button class="btn" onclick="playMusic()">Có</button>
       <button class="btn" onclick="pauseMusic()">Không</button>
     </div>
   </div>
@@ -202,7 +264,7 @@
       <h2 class="scroll-reveal" style="font-weight: normal; font-family: 'align-self: start;';">Tham gia lễ tốt nghiệp của</h2>
       <h1 class="scroll-reveal" style="font-family: Great Vibes, cursive; font-weight: normal; font-size: 2rem;">"Kiều Thương"</h1>
       <p class="scroll-reveal">"Chặng đường Đại học sắp khép lại để mở ra một hành trình mới.</p>
-        <p class="scroll-reveal">Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
+        <p class="scroll-reveal">"Mình rất mong bạn sẽ cùng chia sẻ khoảnh khắc ý nghĩa này!"</p>
       <br>
       <img src="anhthuong.png" alt="Thiệp Mời" class="scroll-reveal" style="height: 50vh; width: auto; max-width: 90vw; border-radius: 20px; object-fit: cover;">
     </div>
