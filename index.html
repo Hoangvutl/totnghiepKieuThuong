@@ -6,237 +6,237 @@
   <title>Thiệp Mời Tốt Nghiệp - Nguyễn Thị Kiều Thương</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Yellowtail&family=Amita&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      height: 100%;
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
-      background: white;
-      color: #B5651D;
-    }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background: white;
+    color: #B5651D;
+  }
 
-    section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
+  section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
 
-    #bg-video {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1000;
-      pointer-events: none;
-    }
+  #bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1000;
+    pointer-events: none;
+  }
 
-    .stars-bg {
-      position: fixed;
-      width: 100%; height: 100%;
-      background: black;
-      z-index: 1000;
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column;
-      animation: fadeOut 1s ease 5s forwards;
-    }
+  .stars-bg {
+    position: fixed;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    animation: fadeOut 1s ease 5s forwards;
+  }
 
-    .stars-text {
-      color: #ffffff;
-      font-size: 2.5rem;
-      z-index: 1001;
-      display: flex;align-items: center; justify-content: center;
-            flex-direction: column;
+  .stars-text {
+    color: #ffffff;
+    font-size: 2.5rem;
+    z-index: 1001;
+    display: flex;align-items: center; justify-content: center;
+    flex-direction: column;
+  }
 
-    }
+  .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
+  .stars span {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: white;
+    animation: twinkle 2s infinite;
+    align-items: center; justify-content: center;
+  }
 
-    .stars { position: absolute; width: 100%; height: 100%; overflow: hidden; }
-    .stars span {
-      position: absolute;
-      width: 2px; height: 2px;
-      background: white;
-      animation: twinkle 2s infinite;
-      align-items: center; justify-content: center;
-    }
+  @keyframes twinkle { 0%,100%{opacity:0;} 50%{opacity:1;} }
+  @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
 
-    @keyframes twinkle { 0%,100%{opacity:0;} 50%{opacity:1;} }
-    @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+  .intro {
+    position: relative;
+    background: transparent;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-    .intro {
-      position: relative;
-      background: transparent;
-      min-height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+  .intro-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .intro-content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-      border-radius: 20px;
-      height: auto;
-      max-width: 90vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  .intro-content h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
 
-    .intro-content h1 {
-      font-size: 2.5rem;
-    }
+  .intro-content h2 {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    margin-bottom: 15px;
+  }
 
-    .intro-content h2 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
+  .intro-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+  }
 
-    .intro-content p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #B5651D;
+    opacity: 0;
+    animation: fadeInCard 2s ease 1s forwards;
+  }
 
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      color: #B5651D;
-      opacity: 0;
-      animation: fadeInCard 2s ease 1s forwards;
-    }
+  @keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-    @keyframes fadeInCard {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
 
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-    }
+  h1 { font-size: 3rem; margin-bottom: 10px; }
+  h2 { font-size: 1.5rem; margin-bottom: 20px; }
+  p { font-size: 1.1rem; line-height: 1.6; }
 
-    h1 { font-size: 3rem; margin-bottom: 10px; }
-    h2 { font-size: 1.5rem; margin-bottom: 20px; }
-    p { font-size: 1.1rem; line-height: 1.6; }
+  .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffd700; color: #444;
+    border: none; border-radius: 10px;
+    cursor: pointer; font-weight: bold;
+    transition: background 0.3s;
+  }
 
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #ffd700; color: #444;
-      border: none; border-radius: 10px;
-      cursor: pointer; font-weight: bold;
-      transition: background 0.3s;
-    }
+  .btn:hover { background: #e5c100; }
 
-    .btn:hover { background: #e5c100; }
+  #music-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.3s;
+  }
 
-    /* Nút bật/tắt nhạc */
-    #music-toggle {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 2000;
-      font-size: 1.8rem;
-      cursor: pointer;
-      /* background: rgba(255,255,255,0.8); */
-      padding: 10px;
-      border-radius: 50%;
-      /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
-      user-select: none;
-      transition: background 0.3s;
-    }
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
 
-    /* #music-toggle:hover {
-      background: #ffeeba;
-    } */
+  .scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    /* Hiệu ứng scroll-reveal */
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
+  .rsvp-box {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #B5651D;
+    font-family: 'Roboto', sans-serif;
+  }
 
-    .scroll-reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .rsvp-box {
-      background: rgba(255, 255, 255, 0.95);
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 30px 25px;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      color: #B5651D;
-      font-family: 'Roboto', sans-serif;
-    }
+  .rsvp-box h2 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive;
+    color: #B5651D;
+  }
 
-    .rsvp-box h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      font-family: 'Great Vibes', cursive;
-      color: #B5651D;
-    }
+  .rsvp-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
 
-    .rsvp-box p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
+  .rsvp-box input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+  }
 
-    .rsvp-box input[type="text"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      outline: none;
-    }
+  .rsvp-box input[type="text"]:focus {
+    border-color: #B5651D;
+  }
 
-    .rsvp-box input[type="text"]:focus {
-      border-color: #B5651D;
-    }
+  .rsvp-box .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
 
-    .rsvp-box .btn {
-      width: 100%;
-      font-size: 1rem;
-    }
+  .success-message {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    background-color: #e6ffee;
+    color: #1c7430;
+    padding: 12px 16px;
+    border-left: 5px solid #28a745;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
 
-    .success-message {
-      opacity: 0;
-      transition: opacity 0.8s ease;
-      background-color: #e6ffee;
-      color: #1c7430;
-      padding: 12px 16px;
-      border-left: 5px solid #28a745;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      margin-top: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      height: auto;
-      display: block; /* ⚠️ Không dùng display: none ở đây */
-      pointer-events: none;
-    }
+  .success-message.show {
+    opacity: 1;
+  }
 
-    .success-message.show {
-      opacity: 1;
-    }
+  .nowrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
-
-  </style>
 </head>
 <body style="background: transparent;">
 
@@ -322,19 +322,19 @@
       <hr style="margin: 15px 0;">
       <p><strong>Vị trí giữ xe:</strong><br>đối diện 61 Phạm Thế Hiển (cổng sau)</p>
       <p><strong>Vị trí hội trường A:</strong><br>Tầng 2, trường Đại học Ngoại ngữ</p>
-      <div style="margin-top: 20px; background: #f5f5f5; padding: 15px; border-radius: 12px;">
+      <div style="margin-top: 20px; background: #f5f5f5; padding: 10px; border-radius: 12px;">
         <p style="font-weight: bold; text-align: center;">Món quà yêu thương</p>
         <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 150px;">
-            <p>Nguyễn Thị Kiều Thương<br>
+          <div style="flex: 1; min-width: 140px;">
+            <p style="font-size: 0.9rem;">Nguyễn Thị Kiều Thương<br>
               Ngân hàng: Vietcombank<br>
               STK:
               <span id="stk">1015846800</span>
               <button onclick="copySTK()" title="Sao chép STK" style="background: none; border: none; cursor: pointer; font-size: 1rem;">📋</button>
             </p>
           </div>
-          <div style="flex: 0 0 100px;">
-            <img src="qr.jpg" alt="QR Vietcombank" style="width: 100px; border-radius: 8px;">
+          <div style="flex: 0 0 90px;">
+            <img src="qr.jpg" alt="QR Vietcombank" style="width: 90px; border-radius: 8px;">
           </div>
         </div>
       </div>
@@ -380,14 +380,15 @@
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const formData = new FormData(form);
       message.textContent = "🎉 Cảm ơn bạn đã xác nhận tham dự!";
+      const formData = new FormData(form);
       fetch('https://script.google.com/macros/s/AKfycbyUNMfdDEWYTQXxth6VbsZsbZsWvhz5s1EY2oUfDJ_Y-27_VZ3hHRsvPEHWEx6QY2wshA/exec', {
         method: 'POST',
         body: formData
       })
       .then(res => res.text())
       .then(data => {
+        
         message.classList.remove("error"); // nếu có class lỗi
         message.classList.add("show");
         form.reset();
